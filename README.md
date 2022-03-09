@@ -1,4 +1,4 @@
-# Nosso Sistema do Market Place
+# Nosso Sistema de Pets
 
 O objetivo deste projeto é que as atividades do `Treinamento de CRUD e Relacionamentos` 
 
