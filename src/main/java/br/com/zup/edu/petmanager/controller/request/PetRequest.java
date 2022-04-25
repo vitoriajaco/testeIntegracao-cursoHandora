@@ -2,10 +2,10 @@ package br.com.zup.edu.petmanager.controller.request;
 
 import br.com.zup.edu.petmanager.model.Pet;
 import br.com.zup.edu.petmanager.model.TipoPet;
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import java.time.LocalDate;
 
 public class PetRequest {
@@ -18,7 +18,8 @@ public class PetRequest {
     @NotNull
     private TipoPetRequest tipo;
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @Past
+    @NotNull
     private LocalDate dataNascimento;
 
     public PetRequest(String nome, String raca, TipoPetRequest tipo, LocalDate dataNascimento) {

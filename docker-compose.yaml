@@ -1,13 +1,11 @@
-version: '3.7'
+version: '3'
 services:
   postgres:
     image: 'postgres:alpine'
     volumes:
-      - postgres-volume:/var/lib/postgresql/data
+      - ./sql/create_schema.sql:/docker-entrypoint-initdb.d/create_schema.sql
     ports:
       - 5432:5432
     environment:
       POSTGRES_PASSWORD: password
-      POSTGRES_MULTIPLE_DATABASES: pet, pet_test
-volumes:
-  postgres-volume:
+      POSTGRES_DB: pet

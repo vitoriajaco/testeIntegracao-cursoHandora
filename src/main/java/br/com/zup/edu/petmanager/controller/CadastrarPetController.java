@@ -16,7 +16,7 @@ import java.net.URI;
 import static org.springframework.http.ResponseEntity.created;
 
 @RestController
-@RequestMapping("/pets/")
+@RequestMapping("/pets")
 public class CadastrarPetController {
     private final PetRepository repository;
 
